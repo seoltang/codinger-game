@@ -86,10 +86,10 @@ html {
 /* Subway */
 @font-face {
     font-family: 'Subway-Black';
-    src:url('webfonts_Subway-Black/Subway-Black.ttf.woff') format('woff'),
-        url('webfonts_Subway-Black/Subway-Black.ttf.svg#Subway-Black') format('svg'),
-        url('webfonts_Subway-Black/Subway-Black.ttf.eot'),
-        url('webfonts_Subway-Black/Subway-Black.ttf.eot?#iefix') format('embedded-opentype');
+    src:url('Subway-Black/Subway-Black.ttf.woff') format('woff'),
+        url('Subway-Black/Subway-Black.ttf.svg#Subway-Black') format('svg'),
+        url('Subway-Black/Subway-Black.ttf.eot'),
+        url('Subway-Black/Subway-Black.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
