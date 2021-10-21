@@ -19,6 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+      :root{
+        --green: #009223;
+        --yellow: #ffc300;
+      }
       html,
       body {
         position: relative;
@@ -28,57 +32,96 @@
       }
       body{
         font-size: 1.75rem;
+        padding-bottom: calc(4rem + 30px);
       }
+      /*
       .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal{
-        --swiper-theme-color: #009223;
+        --swiper-theme-color: var(--green);
         background: rgba(0,0,0,.15);
         height: 7px;
         top: auto;
         bottom: 0;
         position: fixed;
       }
+      */
       h2{
         text-align: center;
         margin: 0;
-        padding: 15px;
-        color: #ffc300;
-        background-color: #009223;
+        padding: 20px;
+        color: var(--yellow);
+        background-color: var(--green);
         font-family: 'Subway-Black', sans-serif;
         font-size: 3.5rem;
+      }
+      .swiper-pagination-bullet {
+        width: calc(100% / 5);
+        height: calc(4rem);
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        color: white;
+        opacity: 1;
+        background: var(--green);
+        border-radius: 0%;
+        padding: 3px 0;
+        margin: 0;
+        --swiper-pagination-bullet-horizontal-gap: 0;
+      }
+      .swiper-horizontal > .swiper-pagination-bullets,
+      .swiper-pagination-bullets.swiper-pagination-horizontal {
+        position: fixed;
+        bottom: 0;
+      }
+      .swiper-pagination-bullet-active {
+        background: var(--yellow);
+      }
+      .menuName{
+        font-size: 1.6rem;
       }
       button{
         border: 0;
         font-size: 1.6rem;
         color: white;
-        background-color: #009223;
+        background-color: var(--green);
         padding: 5px;
-        margin: 10px auto 30px auto;
+        margin: 10px auto;
         display: block;
       }
       input{
         display: none;
       }
-      label::before{
+      .container label::before{
         content: "";
         display: inline-block;
         margin: auto 15px auto 10px;
-        width: 10px; height: 10px;
+        width: 11px; height: 11px;
         background: transparent;
-        border: 2px solid #ffc300;
+        border: 2px solid var(--yellow);
         border-radius: 50%;
       }
-      input:checked + label::before{
-        background: #ffc300;
+      .container input:checked + label::before{
+        background: var(--yellow);
       }
       .container{
         margin: 10px auto;
         line-height: 2rem;
       }
+      .caption{
+        grid-column: 1/4;
+        font-size: 1.5rem;
+        color: white;
+        background: var(--yellow);
+        height: 0;
+        transition: all ease 0.5s 0s;
+      }
+      .container input:checked + label + .caption{
+        height: 40px;
+        padding: 10px 0;
+      }
 
       .bread-container {
         display: grid;
         grid-template-columns: 1fr 1.5fr 0.5fr;
-        grid-auto-rows: 1fr;
         align-items: center;
         text-align: center;
       }
@@ -94,47 +137,51 @@
   </head>
   <body>
     <h2>MY<span style="color:white;">WAY</span></h2>
-    <div class="swiper" id="mySwiper">
+    <div class="swiper" id="swiper-pagination">
       <div class="swiper-wrapper container">
         <div class="bread-container swiper-slide">
           <img class="breadImg" src="subway_img\img_recipe_b01.jpg" alt="">
           <span class="breadName"><div class="ingredientsNameEng">Honey Oat</div>허니오트</span>
           <input type="radio" name="chooseBread" value="honeyOat" id="b1">
           <label for="b1"></label>
+          <div class="caption">고소한 위트빵에 오트밀 가루를 묻혀<br>고소함과 식감이 두배로</div>
 
           <img class="breadImg" src="subway_img\img_recipe_b02.jpg" alt="">
           <span class="breadName"><div class="ingredientsNameEng">Hearty Italian</div>하티</span>
           <input type="radio" name="chooseBread" value="heartyItalian" id="b2">
           <label for="b2"></label>
+          <div class="caption">부드러운 화이트빵에 옥수수가루를 묻혀<br>겉은 바삭하고 고소하며 속은 부드럽게</div>
 
           <img class="breadImg" src="subway_img\img_recipe_b03.jpg" alt="">
           <span class="breadName"><div class="ingredientsNameEng">Wheat</div>위트</span>
           <input type="radio" name="chooseBread" value="wheat" id="b3">
           <label for="b3"></label>
+          <div class="caption">9가지 곡물로 만들어<br>건강하고 고소한 맛의 곡물빵</div>
 
           <img class="breadImg" src="subway_img\img_recipe_b04.jpg" alt="">
           <span class="breadName"><div class="ingredientsNameEng">Parmesan Oregano</div>파마산 오레가노</span>
           <input type="radio" name="chooseBread" value="parmesanOregano" id="b4">
           <label for="b4"></label>
+          <div class="caption">부드러운 화이트빵에<br>파마산 오레가노 시즈닝을 묻혀 허브향 가득</div>
 
           <img class="breadImg" src="subway_img\img_recipe_b05.jpg" alt="">
           <span class="breadName"><div class="ingredientsNameEng">White</div>화이트</span>
           <input type="radio" name="chooseBread" value="white" id="b5">
           <label for="b5"></label>
+          <div class="caption">가장 클래식한 빵으로<br>부드러운 식감이 매력 포인트</div>
 
           <img class="breadImg" src="subway_img\img_recipe_b06.jpg" alt="">
           <span class="breadName"><div class="ingredientsNameEng">Flat Bread
           </div>플랫브레드</span>
           <input type="radio" name="chooseBread" value="flatBread" id="b6">
           <label for="b6"></label>
+          <div class="caption">이름처럼 납작 모양에<br>피자도우처럼 쫀득한 맛이 일품</div>
 
         </div>
         <div class="swiper-slide">Slide 2</div>
         <div class="swiper-slide">Slide 3</div>
         <div class="swiper-slide">Slide 4</div>
         <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -145,11 +192,25 @@
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper("#mySwiper", {
+      var menulist = ["", "빵", "치 즈", "추 가", "야 채", "소 스"];
+      var swiper = new Swiper("#swiper-pagination", {
         pagination: {
           el: ".swiper-pagination",
-          type: "progressbar",
-        }
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              '">' +
+              "STEP " +
+              (index + 1) +
+              "<div class='menuName'>" +
+              menulist[index + 1] +
+              "</div>" +
+              "</span>"
+            );
+          },
+        },
       });
     </script>
   </body>
