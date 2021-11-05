@@ -1,0 +1,183 @@
+:root{
+  --green: #009223;
+  --yellow: #ffc300;
+}
+html,
+body {
+  position: relative;
+  overflow: auto;
+  width: 100vw;
+  margin: 0;
+}
+body{
+  font-size: 1.75rem;
+}
+/*
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal{
+  --swiper-theme-color: var(--green);
+  background: rgba(0,0,0,.15);
+  height: 7px;
+  top: auto;
+  bottom: 0;
+  position: fixed;
+}
+*/
+h2{
+  text-align: center;
+  margin: 0;
+  padding: 15px 0;
+  color: var(--yellow);
+  background-color: var(--green);
+  font-family: 'MuseoModerno', cursive;
+  font-weight: 900;
+  font-size: 3.5rem;
+}
+.swiper-pagination-bullet {
+  width: calc(100% / 5);
+  height: calc(4rem);
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  color: white;
+  opacity: 1;
+  background: var(--green);
+  border-radius: 0%;
+  padding: 3px 0;
+  margin: 0;
+  --swiper-pagination-bullet-horizontal-gap: 0;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: fixed;
+  bottom: 0;
+}
+.swiper-pagination-bullet-active {
+  background: var(--yellow);
+}
+/* 다른 탭 스크롤 아랫부분 숨기기 */
+/*.grid:not(.swiper-slide-active) > img,
+.grid:not(.swiper-slide-active) > button {
+  display: none;
+}*/
+.grid:not(.swiper-slide-active) {
+  height: 70vh;
+}
+
+.bulletName {
+  font-size: 1.6rem;
+}
+
+ul.remindOrder {
+  visibility: hidden;
+  height: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+ul.remindOrderOpen {
+  visibility: visible;
+  list-style-type: none;
+  font-size: 12.5px;
+  text-align: justify;
+  color: var(--green);
+  height: auto;
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  padding: 7.5px 10px 5px 32.5px;
+  margin: 5px 10px 0 10px;
+}
+ul.remindOrderOpen li::before {
+  content: "🥪";
+  margin: 0 2.5px 0 -20px;
+}
+ul.remindOrderOpen li {
+  margin-bottom: 5px;
+}
+button {
+  border: 0;
+  font-size: 1.5rem;
+  font-family: inherit;
+}
+button.remindOrder {
+  font-size: 1.4rem;
+  color: var(--green);
+  background: transparent;
+  display: block;
+  padding: 0 5px;
+  margin: 15px auto 0 15px;
+}
+button.remindOrder::before {
+  content: "▼ ";
+}
+button.remindOrderOpen::before {
+  content: "▲ ";
+}
+button.submit {
+  grid-column: 1/4;
+  justify-self: center;
+  color: white;
+  background-color: var(--green);
+  width: 150px;
+  padding: 5px 10px;
+  margin: 20px auto 10px auto;
+  border-bottom: 3px solid var(--yellow);
+}
+button.remindOrder.btnPressed {
+  color: var(--yellow);
+}
+button.submit.btnPressed {
+  background: var(--yellow);
+  border-bottom: 3px solid var(--green);
+}
+input{
+  display: none;
+}
+.container label::before{
+  content: "";
+  display: inline-block;
+  margin: auto 15px auto 10px;
+  width: 11px; height: 11px;
+  background: transparent;
+  border: 2px solid var(--yellow);
+  border-radius: 50%;
+}
+.container input:checked + label::before{
+  background: var(--yellow);
+}
+.container{
+  margin: 10px auto;
+  line-height: 2rem;
+}
+.caption{
+  grid-column: 1/4;
+  font-size: 1.4rem;
+  color: transparent;
+  background: var(--yellow);
+  height: 0;
+  transition: all ease 0.5s 0s;
+}
+.container input:checked + label + .caption{
+  color: black;
+  height: auto;
+  padding: 10px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 0.5fr;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.grid:nth-child(2) {
+  padding-bottom: 100px;
+}
+img {
+  width: 50vw;
+}
+.ingredientsNameEng {
+  font-family: 'Podkova', serif;
+  font-weight: 450;
+  font-size: 1.5rem;
+}

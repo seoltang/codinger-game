@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>ROUND 2</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
@@ -16,176 +16,261 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&family=Podkova:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-      :root{
-        --green: #009223;
-        --yellow: #ffc300;
-      }
-      html,
-      body {
-        position: relative;
-        overflow: auto;
-        width: 100vw;
-        margin: 0;
-      }
-      body{
-        font-size: 1.75rem;
-        padding-bottom: calc(4rem + 30px);
-      }
-      /*
-      .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal{
-        --swiper-theme-color: var(--green);
-        background: rgba(0,0,0,.15);
-        height: 7px;
-        top: auto;
-        bottom: 0;
-        position: fixed;
-      }
-      */
-      h2{
-        text-align: center;
-        margin: 0;
-        padding: 20px;
-        color: var(--yellow);
-        background-color: var(--green);
-        font-family: 'Subway-Black', sans-serif;
-        font-size: 3.5rem;
-      }
-      .swiper-pagination-bullet {
-        width: calc(100% / 5);
-        height: calc(4rem);
-        text-align: center;
-        font-size: 1.2rem;
-        line-height: 1.9rem;
-        color: white;
-        opacity: 1;
-        background: var(--green);
-        border-radius: 0%;
-        padding: 3px 0;
-        margin: 0;
-        --swiper-pagination-bullet-horizontal-gap: 0;
-      }
-      .swiper-horizontal > .swiper-pagination-bullets,
-      .swiper-pagination-bullets.swiper-pagination-horizontal {
-        position: fixed;
-        bottom: 0;
-      }
-      .swiper-pagination-bullet-active {
-        background: var(--yellow);
-      }
-      .menuName{
-        font-size: 1.6rem;
-      }
-      button{
-        border: 0;
-        font-size: 1.6rem;
-        color: white;
-        background-color: var(--green);
-        padding: 5px;
-        margin: 10px auto;
-        display: block;
-      }
-      input{
-        display: none;
-      }
-      .container label::before{
-        content: "";
-        display: inline-block;
-        margin: auto 15px auto 10px;
-        width: 11px; height: 11px;
-        background: transparent;
-        border: 2px solid var(--yellow);
-        border-radius: 50%;
-      }
-      .container input:checked + label::before{
-        background: var(--yellow);
-      }
-      .container{
-        margin: 10px auto;
-        line-height: 2rem;
-      }
-      .caption{
-        grid-column: 1/4;
-        font-size: 1.5rem;
-        color: white;
-        background: var(--yellow);
-        height: 0;
-        transition: all ease 0.5s 0s;
-      }
-      .container input:checked + label + .caption{
-        height: 40px;
-        padding: 10px 0;
-      }
+    <!-- My CSS -->
+    <link rel="stylesheet" href="myway.css">
 
-      .bread-container {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr 0.5fr;
-        align-items: center;
-        text-align: center;
-      }
-      .breadImg {
-        width: 50vw;
-      }
-      .ingredientsNameEng{
-        font-family: 'Podkova', serif;
-        font-weight: 450;
-        font-size: 1.5rem;
-      }
-    </style>
   </head>
   <body>
     <h2>MY<span style="color:white;">WAY</span></h2>
-    <div class="swiper" id="swiper-pagination">
-      <div class="swiper-wrapper container">
-        <div class="bread-container swiper-slide">
-          <img class="breadImg" src="subway_img\img_recipe_b01.jpg" alt="">
-          <span class="breadName"><div class="ingredientsNameEng">Honey Oat</div>허니오트</span>
-          <input type="radio" name="chooseBread" value="honeyOat" id="b1">
-          <label for="b1"></label>
-          <div class="caption">고소한 위트빵에 오트밀 가루를 묻혀<br>고소함과 식감이 두배로</div>
+    <button type="button" class="remindOrder">주문이 뭐더라?</button>
+    <ul class="remindOrder">
+      <li>고기 종류가 들어간 샌드위치를 먹을 거야. 샌드위치 종류에 따라 조합이 크게 달라지진 않아. 나는 항상 내 취향인 재료만 넣거든.</li>
+      <li><strong>빵</strong>만큼은 건강한 느낌이 나는 걸로 부탁해. 씹는 맛이 있으면 더 좋고.</li>
+      <li><strong>치즈</strong>는 다 맛있기 때문에 그때그때 끌리는 걸로.</li>
+      <li><strong>추가</strong>는 하나만 해도 될 거 같아. 이 토핑이 베이스인 메뉴도 있지만, 그건 육류가 안 들어가서 난 다른 메뉴에 이 토핑을 추가해서 먹곤 해. 솔직히 모든 메뉴에 이 토핑 추가는 필수라고 생각해.</li>
+      <li>다른 사람들은 빼는 <strong>야채</strong>를 말하지만 나는 4가지만 넣기 때문에 넣는 야채를 말해. 4가지 합치면 열 글자라서 말하기 좀 길지만 이젠 입에 익었어. 다른 건 몰라도 야채는 내가 싫어하는 게 들어가면 절대 안 돼. 예컨대 이름에 같은 초성이 2번 들어가는 야채들이랄까.</li>
+      <li><strong>소스</strong>는 단짠고소한 게 좋겠어. 살짝 매콤해도 좋은데 너무 매운 건 별로. 아무 데서나 먹을 수 있는 흔한 소스보다는 특색 있는 소스가 좋아. 소스는 다다익선이니까 3가지까지.</li>
+    </ul>
+    <form>
+      <div class="swiper" id="swiper-pagination">
+        <div class="swiper-wrapper container">
+          <!-- 빵 -->
+          <div class="grid swiper-slide">
+            <img class="breadImg" src="subway_img\img_recipe_b01.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Honey Oat</div>허니오트</span>
+            <input type="radio" class="chooseIngredients" name="chooseBread" value="150" id="b1">
+            <label for="b1"></label>
+            <div class="caption">고소한 위트빵에 오트밀 가루를 묻혀<br>고소함과 식감이 두배로</div>
 
-          <img class="breadImg" src="subway_img\img_recipe_b02.jpg" alt="">
-          <span class="breadName"><div class="ingredientsNameEng">Hearty Italian</div>하티</span>
-          <input type="radio" name="chooseBread" value="heartyItalian" id="b2">
-          <label for="b2"></label>
-          <div class="caption">부드러운 화이트빵에 옥수수가루를 묻혀<br>겉은 바삭하고 고소하며 속은 부드럽게</div>
+            <img class="breadImg" src="subway_img\img_recipe_b02.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Hearty Italian</div>하티</span>
+            <input type="radio" class="chooseIngredients" name="chooseBread" value="20" id="b2">
+            <label for="b2"></label>
+            <div class="caption">부드러운 화이트빵에 옥수수가루를 묻혀<br>겉은 바삭하고 고소하며 속은 부드럽게</div>
 
-          <img class="breadImg" src="subway_img\img_recipe_b03.jpg" alt="">
-          <span class="breadName"><div class="ingredientsNameEng">Wheat</div>위트</span>
-          <input type="radio" name="chooseBread" value="wheat" id="b3">
-          <label for="b3"></label>
-          <div class="caption">9가지 곡물로 만들어<br>건강하고 고소한 맛의 곡물빵</div>
+            <img class="breadImg" src="subway_img\img_recipe_b03.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Wheat</div>위트</span>
+            <input type="radio" class="chooseIngredients" name="chooseBread" value="80" id="b3">
+            <label for="b3"></label>
+            <div class="caption">9가지 곡물로 만들어<br>건강하고 고소한 맛의 곡물빵</div>
 
-          <img class="breadImg" src="subway_img\img_recipe_b04.jpg" alt="">
-          <span class="breadName"><div class="ingredientsNameEng">Parmesan Oregano</div>파마산 오레가노</span>
-          <input type="radio" name="chooseBread" value="parmesanOregano" id="b4">
-          <label for="b4"></label>
-          <div class="caption">부드러운 화이트빵에<br>파마산 오레가노 시즈닝을 묻혀 허브향 가득</div>
+            <img class="breadImg" src="subway_img\img_recipe_b04.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Parmesan Oregano</div>파마산 오레가노</span>
+            <input type="radio" class="chooseIngredients" name="chooseBread" value="20" id="b4">
+            <label for="b4"></label>
+            <div class="caption">부드러운 화이트빵에<br>파마산 오레가노 시즈닝을 묻혀 허브향 가득</div>
 
-          <img class="breadImg" src="subway_img\img_recipe_b05.jpg" alt="">
-          <span class="breadName"><div class="ingredientsNameEng">White</div>화이트</span>
-          <input type="radio" name="chooseBread" value="white" id="b5">
-          <label for="b5"></label>
-          <div class="caption">가장 클래식한 빵으로<br>부드러운 식감이 매력 포인트</div>
+            <img class="breadImg" src="subway_img\img_recipe_b05.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">White</div>화이트</span>
+            <input type="radio" class="chooseIngredients" name="chooseBread" value="10" id="b5">
+            <label for="b5"></label>
+            <div class="caption">가장 클래식한 빵으로<br>부드러운 식감이 매력 포인트</div>
 
-          <img class="breadImg" src="subway_img\img_recipe_b06.jpg" alt="">
-          <span class="breadName"><div class="ingredientsNameEng">Flat Bread
-          </div>플랫브레드</span>
-          <input type="radio" name="chooseBread" value="flatBread" id="b6">
-          <label for="b6"></label>
-          <div class="caption">이름처럼 납작 모양에<br>피자도우처럼 쫀득한 맛이 일품</div>
+            <img class="breadImg" src="subway_img\img_recipe_b06.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Flat Bread
+            </div>플랫브레드</span>
+            <input type="radio" class="chooseIngredients" name="chooseBread" value="70" id="b6">
+            <label for="b6"></label>
+            <div class="caption">이름처럼 납작 모양에<br>피자도우처럼 쫀득한 맛이 일품</div>
+          </div>
 
+          <!-- 치즈 -->
+          <div class="grid swiper-slide">
+            <img class="cheeseImg" src="subway_img\img_recipe_c01.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">American Cheese</div>아메리칸 치즈</span>
+            <input type="radio" class="chooseIngredients" name="chooseCheese" value="50" id="c1">
+            <label for="c1"></label>
+            <div class="caption">짭조롬하면서 깊은 맛의<br>대중적인 슬라이스 치즈</div>
+
+            <img class="cheeseImg" src="subway_img\img_recipe_c02.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Shredded Cheese</div>슈레드 치즈</span>
+            <input type="radio" class="chooseIngredients" name="chooseCheese" value="50" id="c2">
+            <label for="c2"></label>
+            <div class="caption">체다 치즈와 몬테레이 잭 치즈를 잘게 갈은<br>풍미 있고 부드러운 혼합 치즈</div>
+
+            <img class="cheeseImg" src="subway_img\img_recipe_c03.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Mozzarella Cheese</div>모차렐라 치즈</span>
+            <input type="radio" class="chooseIngredients" name="chooseCheese" value="50" id="c3">
+            <label for="c3"></label>
+            <div class="caption">진한 우유의 풍미를 느낄 수 있는<br>쫄깃한 식감의 치즈</div>
+          </div>
+
+          <!-- 추가토핑 -->
+          <div class="grid swiper-slide">
+            <img class="toppingImg" src="subway_img\img_toppping_01.png" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Egg Mayo</div>에그마요</span>
+            <input type="radio" class="chooseIngredients" name="chooseTopping" value="200" id="t1">
+            <label for="t1"></label>
+            <div class="caption">신선한 달걀과<br>고소한 마요네즈의 만남</div>
+
+            <img class="toppingImg" src="subway_img\img_toppping_02.png" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Omelet</div>오믈렛</span>
+            <input type="radio" class="chooseIngredients" name="chooseTopping" value="50" id="t2">
+            <label for="t2"></label>
+            <div class="caption">더 부드럽게, 더 고소하게</div>
+
+            <img class="toppingImg" src="subway_img\img_toppping_03.png" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Avocado</div>아보카도</span>
+            <input type="radio" class="chooseIngredients" name="chooseTopping" value="120" id="t3">
+            <label for="t3"></label>
+            <div class="caption">숲속의 버터 아보카도로 영양 UP</div>
+
+            <img class="toppingImg" src="subway_img\img_toppping_04.png" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Bacon</div>베이컨</span>
+            <input type="radio" class="chooseIngredients" name="chooseTopping" value="50" id="t4">
+            <label for="t4"></label>
+            <div class="caption">진한 풍미의 바삭한 베이컨</div>
+
+            <img class="toppingImg" src="subway_img\img_toppping_05.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Pepperoni</div>페퍼로니</span>
+            <input type="radio" class="chooseIngredients" name="chooseTopping" value="50" id="t5">
+            <label for="t5"></label>
+            <div class="caption">입맛 당기는 페퍼로니</div>
+
+            <img class="toppingImg" src="subway_img\img_toppping_06.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Cheese</div>치즈 추가</span>
+            <input type="radio" class="chooseIngredients" name="chooseTopping" value="50" id="t6">
+            <label for="t6"></label>
+            <div class="caption">고소한 치즈를 2배로</div>
+          </div>
+
+          <!-- 야채 -->
+          <div class="grid swiper-slide">
+            <img class="vegetableImg" src="subway_img\img_recipe_v01.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Lettuce</div>양상추</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseVegetable" value="100" id="v1">
+            <label for="v1"></label>
+
+            <img class="vegetableImg" src="subway_img\img_recipe_v02.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Tomatoes</div>토마토</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseVegetable" value="-500" id="v2">
+            <label for="v2"></label>
+
+            <img class="vegetableImg" src="subway_img\img_recipe_v03.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Cucumbers</div>오이</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseVegetable" value="-500" id="v3">
+            <label for="v3"></label>
+
+            <img class="vegetableImg" src="subway_img\img_recipe_v04.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Peppers</div>피망</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseVegetable" value="-100" id="v4">
+            <label for="v4"></label>
+
+            <img class="vegetableImg" src="subway_img\img_recipe_v05.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Red Onions</div>양파</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseVegetable" value="100" id="v5">
+            <label for="v5"></label>
+
+            <img class="vegetableImg" src="subway_img\img_recipe_v06.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Pickles</div>피클</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseVegetable" value="100" id="v6">
+            <label for="v6"></label>
+
+            <img class="vegetableImg" src="subway_img\img_recipe_v07.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Olives</div>올리브</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseVegetable" value="100" id="v7">
+            <label for="v7"></label>
+
+            <img class="vegetableImg" src="subway_img\img_recipe_v08.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Jalapenos</div>할라피뇨</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseVegetable" value="0" id="v8">
+            <label for="v8"></label>
+          </div>
+
+          <!-- 소스 -->
+          <div class="grid swiper-slide">
+            <img class="sauceImg" src="subway_img\img_recipe_s01.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Ranch</div>랜치</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="100" id="s1">
+            <label for="s1"></label>
+            <div class="caption">고소한 마요네즈와 레몬즙의 만남</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s02.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Mayonnaise</div>마요네즈</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="10" id="s2">
+            <label for="s2"></label>
+            <div class="caption">말이 필요없는 고소함의 대명사</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s07.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Sweet Onion</div>스위트 어니언</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="50" id="s3">
+            <label for="s3"></label>
+            <div class="caption">특제 레시피로 만든 달콤한 양파소스</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s03.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Honey Mustard</div>허니 머스타드</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="30" id="s4">
+            <label for="s4"></label>
+            <div class="caption">겨자씨가 아낌없이 들어간 달콤한 머스타드 소스</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s12.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Sweet Chilli</div>스위트 칠리</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="50" id="s5">
+            <label for="s5"></label>
+            <div class="caption">매콤한 칠리에 더해진 기분 좋은 달콤함</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s18.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Hot Chilli</div>핫 칠리</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="30" id="s6">
+            <label for="s6"></label>
+            <div class="caption">진짜 매운맛을 보고 싶다면 핫 칠리</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s09.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Southwest Chipotle</div>사우스웨스트</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="30" id="s7">
+            <label for="s7"></label>
+            <div class="caption">핫 칠리와 고소한 마요네즈가 만난 이국적인 매콤한 맛</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s11.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Yellow Mustard</div>머스타드</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="10" id="s8">
+            <label for="s8"></label>
+            <div class="caption">오리지날 옐로우 머스타드 소스</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s04.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Horseradish</div>홀스래디쉬</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="10" id="s9">
+            <label for="s9"></label>
+            <div class="caption">고소한 마요네즈와 고추냉이의 이색적인 만남</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s06.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Olive Oil</div>올리브 오일</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="0" id="s10">
+            <label for="s10"></label>
+            <div class="caption">담백하고 깔끔하게 즐기고 싶다면 올리브오일</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s05.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Red Wine Vinaigrette</div>레드와인식초</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="10" id="s11">
+            <label for="s11"></label>
+            <div class="caption">레드와인을 발효시켜 풍미가 가득한 식초</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s13.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Salt</div>소금</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="0" id="s12">
+            <label for="s12"></label>
+            <div class="caption">소금소금</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s14.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Black Pepper</div>후추</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="10" id="s13">
+            <label for="s13"></label>
+            <div class="caption">후추후추</div>
+
+            <img class="sauceImg" src="subway_img\img_recipe_s17.jpg" alt="">
+            <span class="ingredientsName"><div class="ingredientsNameEng">Smoke BBQ</div>스모크 바비큐</span>
+            <input type="checkbox" class="chooseIngredients" name="chooseSauce" value="50" id="s14">
+            <label for="s14"></label>
+            <div class="caption">스모크 향과 달콤한 바비큐의 완벽한 조화</div>
+
+            <button type="submit" class="submit">주문 완료!</button>
+          </div>
         </div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
-    <button type="button">주문이 뭐더라?</button>
+    </form>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -204,7 +289,7 @@
               '">' +
               "STEP " +
               (index + 1) +
-              "<div class='menuName'>" +
+              "<div class='bulletName'>" +
               menulist[index + 1] +
               "</div>" +
               "</span>"
@@ -213,5 +298,8 @@
         },
       });
     </script>
+
+    <script src="myway.js"></script>
+
   </body>
 </html>

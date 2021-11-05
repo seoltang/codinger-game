@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ROUND 2</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- 기본 폰트 -->
+    <link rel="stylesheet" href="fonts\fonts.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&family=Podkova:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+      :root{
+        --green: #009223;
+        --yellow: #ffc300;
+      }
+      html,
+      body {
+        width: 100vw;
+        margin: 0;
+        background: var(--green);
+        color: white;
+      }
+      body{
+        font-size: 1.6rem;
+      }
+      @keyframes appearEffect {
+        0% {
+          margin-left: 0;
+          opacity: 0;
+        }
+        100% {
+          margin-left: 20px;
+          opacity: 1;
+        }
+      }
+      h1 {
+        margin: 40vh 0 0 20px;
+        font-family: 'Podkova', serif;
+        font-size: 3rem;
+        animation: appearEffect 1.5s both;
+      }
+      h2 {
+        margin: 0 0 0 20px;
+        color: var(--yellow);
+        font-family: 'MuseoModerno', cursive;
+        font-weight: 900;
+        font-size: 6.5rem;
+        line-height: 7rem;
+        animation: appearEffect 1.5s 1.5s both;
+      }
+      button {
+        font-family: inherit;
+        font-size: inherit;
+      }
+      button.remindOrder {
+        border: 0;
+        color: white;
+        background: transparent;
+        display: block;
+        padding: 0;
+        margin: 30px auto 0 20px;
+        animation: appearEffect 1.5s 3s both;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      button.remindOrder::before {
+        content: "New ";
+        color: var(--yellow);
+        animation: blink 0.8s step-end infinite;
+      }
+      button.remindOrderOpen::before {
+        animation: paused;
+      }
+      ul.remindOrder {
+        font-size: 1.4rem;
+        visibility: hidden;
+        height: 0;
+        border: 0;
+        padding: 0;
+        margin: 0;
+      }
+      ul.remindOrderOpen {
+        visibility: visible;
+        list-style-type: none;
+        text-align: justify;
+        color: var(--green);
+        background: white;
+        height: auto;
+        border: 0;
+        border-radius: 5px;
+        padding: 1rem 1rem 0.5rem 3.25rem;
+        margin: 10px 15px;
+      }
+      ul.remindOrderOpen li::before {
+        content: "🥪";
+        margin: 0 0.5rem 0 -2.5rem;
+      }
+      ul.remindOrderOpen li {
+        margin-bottom: 1rem;
+      }
+      button.nextpg {
+        display: none;
+        text-align: center;
+        color: white;
+        background: var(--yellow);
+        border: 0;
+        width: inherit;
+        padding: 10px 0;
+      }
+      button.btnNextpgOpen {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ROUND 2</h1>
+    <h2>MY<span style="color:white;">WAY</span></h2>
+    <button type="button" class="remindOrder">새 주문이 접수되었습니다.</button>
+    <ul class="remindOrder">
+      <li>고기 종류가 들어간 샌드위치를 먹을 거야. 샌드위치 종류에 따라 조합이 크게 달라지진 않아. 나는 항상 내 취향인 재료만 넣거든.</li>
+      <li><strong>빵</strong>만큼은 건강한 느낌이 나는 걸로 부탁해. 씹는 맛이 있으면 더 좋고.</li>
+      <li><strong>치즈</strong>는 다 맛있기 때문에 그때그때 끌리는 걸로.</li>
+      <li><strong>추가</strong>는 하나만 해도 될 거 같아. 이 토핑이 베이스인 메뉴도 있지만, 그건 육류가 안 들어가서 난 다른 메뉴에 이 토핑을 추가해서 먹곤 해. 솔직히 모든 메뉴에 이 토핑 추가는 필수라고 생각해.</li>
+      <li>다른 사람들은 빼는 <strong>야채</strong>를 말하지만 나는 4가지만 넣기 때문에 넣는 야채를 말해. 4가지 합치면 열 글자라서 말하기 좀 길지만 이젠 입에 익었어. 다른 건 몰라도 야채는 내가 싫어하는 게 들어가면 절대 안 돼. 예컨대 이름에 같은 초성이 2번 들어가는 야채들이랄까.</li>
+      <li><strong>소스</strong>는 단짠고소한 게 좋겠어. 살짝 매콤해도 좋은데 너무 매운 건 별로. 아무 데서나 먹을 수 있는 흔한 소스보다는 특색 있는 소스가 좋아. 소스는 다다익선이니까 3가지까지.</li>
+    </ul>
+    <button type="button" class="nextpg">뭐…뭐라구? 일단 샌드위치 만들러 가자 👩‍🍳</button>
+
+    <script>
+      // 주문서 열기
+      const ulRemindOrder = document.querySelector('ul.remindOrder');
+      const btnRemindOrder = document.querySelector('button.remindOrder');
+      const btnNextpg = document.querySelector('button.nextpg');
+      function openUlRemindOrder() {
+        ulRemindOrder.classList.toggle('remindOrderOpen');
+        btnRemindOrder.classList.toggle('remindOrderOpen');
+        btnNextpg.classList.toggle('btnNextpgOpen');
+      };
+      btnRemindOrder.addEventListener('click', openUlRemindOrder);
+      
+      // 다음 페이지로 이동
+      function moveOnNextpg() {
+        window.location.href = "myway.html";
+      }
+      btnNextpg.addEventListener('click',moveOnNextpg);
+    </script>
+  </body>
+</html>
