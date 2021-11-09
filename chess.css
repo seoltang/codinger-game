@@ -1,0 +1,209 @@
+/* 공통 */
+:root {
+  --cream: #f8f3f1;
+  --red: #d04958;
+  --lightpink: #feeaec;
+  --green: #07565a;
+  --yellow: #ffda86;
+  --chessboardBorder: 5px ridge var(--yellow);
+}
+body {
+  font-size: 1.5rem;
+  background: var(--cream);
+  margin: 20px 10px;
+}
+.text {
+  text-indent: 1rem;
+  text-align: justify;
+  color: var(--green);
+  margin: 30px 0;
+}
+p {
+  margin: auto;
+}
+
+/* chess_intro.html */
+h1 {
+  color: rgb(140, 140, 140);
+  font-family: 'Podkova', serif;
+  font-size: 3rem;
+  margin: 40vh auto 0 auto;
+}
+h2 {
+  color: var(--red);
+  font-size: 11vw;
+  margin: 0 auto;
+}
+img.mirrorImg {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.scrollAnimation {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.5s ease;
+}
+.scrollAnimation.visible {
+  opacity: 1;
+  transform: none;
+}
+/*a.nextpg {
+  text-decoration: none;
+  color: var(--cream);
+  background: var(--green);
+  padding: 0 2px;
+}*/
+a.nextpg {
+  all: unset;
+  border: 2px solid var(--green);
+  padding: 0 2px 1px 2px;
+}
+a.nextpg:active {
+  color: var(--cream);
+  background: var(--green);
+}
+
+/* chess.html */
+div.containerQuestion {
+  display: grid;
+  grid-template-columns: 1fr repeat(8, auto) 1fr;
+  grid-gap: 0;
+  width: 100%;
+  margin: 20px auto;
+}
+div.jabberwocky {
+  height: calc(8rem + 5px);
+  padding: 0 5px;
+  word-break: break-all;
+  text-align: justify;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+  text-overflow: clip;
+}
+div.jabberwockyMirror {
+  grid-row: 1 / 5;
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+}
+div.jabberwockyOriginal {
+  grid-row: 5 / 9;
+}
+div.left {
+  grid-column: 1 / 2;
+}
+div.right {
+  grid-column: 10 / 11;
+}
+div.chessboard {
+  width: 2rem;
+  height: 2rem;
+}
+div.chessboardOdd {
+  background: var(--lightpink);
+}
+div.chessboardEven {
+  background: var(--red);
+}
+div.chessboard:nth-child(-n + 9) {
+  border-top: var(--chessboardBorder);
+}
+div.chessboard:nth-last-child(-n + 9) {
+  border-bottom: var(--chessboardBorder);
+}
+div.chessboard:nth-last-child(8n + 35) {
+  border-left: var(--chessboardBorder);
+}
+div.chessboard:nth-child(8n + 36) {
+  border-left: var(--chessboardBorder);
+}
+div.chessboard:nth-last-child(8n + 36) {
+  border-right: var(--chessboardBorder);
+}
+div.chessboard:nth-child(8n + 35) {
+  border-right: var(--chessboardBorder);
+}
+img.chessImg {
+  width: 2rem;
+}
+
+div.containerAnswer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 0;
+  width: 80vw;
+  min-height: 80vw;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+div.answerboard {
+  color: transparent;
+  background: var(--yellow);
+  border: 1px solid var(--green);
+}
+div.clicked {
+  color: var(--yellow);
+  background: var(--green);
+  border: 1px solid var(--yellow);
+}
+
+.password {
+  margin: 0 auto 30px auto;
+}
+input.password {
+  font-size: 1.6rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid var(--green);
+  height: 2rem;
+  margin: 0 5px 0 15px;
+}
+input.password:focus {
+  outline: inherit;
+}
+button.password {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 0;
+  color: var(--yellow);
+  background: var(--green);
+  border: 2px solid var(--green);
+  border-radius: 0;
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+}
+button.password:active {
+  color: var(--green);
+  background: var(--yellow);
+}
+
+.hint {
+  font-size: 1.5rem;
+}
+button.hint {
+  font-size: 1.4rem;
+  color: var(--yellow);
+  background: var(--green);
+  border: 0;
+  padding: 2px 5px;
+}
+button#btnH1 {
+  font-family: 'Roboto Slab', serif;
+}
+button#btnH2 {
+  text-align: left;
+}
+div.hint {
+  text-align: justify;
+  color: var(--green);
+  margin: 5px 10px 20px 10px;
+}
+.hidden {
+  display: none;
+}
