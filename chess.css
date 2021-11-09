@@ -34,6 +34,9 @@ h2 {
   font-size: 11vw;
   margin: 0 auto;
 }
+h1, h2 {
+  margin-left: 5px;
+}
 img.mirrorImg {
   width: 80%;
   display: block;
@@ -48,12 +51,6 @@ img.mirrorImg {
   opacity: 1;
   transform: none;
 }
-/*a.nextpg {
-  text-decoration: none;
-  color: var(--cream);
-  background: var(--green);
-  padding: 0 2px;
-}*/
 a.nextpg, a.nextpg:visited {
   all: unset;
   text-decoration: none;
