@@ -26,11 +26,9 @@ p {
 @keyframes appearEffect {
   0% {
     transform: translateX(-20px);
-    margin-left: 0;
     opacity: 0;
   }
   100% {
-    margin-left: 5px;
     opacity: 1;
   }
 }
