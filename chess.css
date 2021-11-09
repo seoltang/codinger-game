@@ -54,12 +54,14 @@ img.mirrorImg {
   background: var(--green);
   padding: 0 2px;
 }*/
-a.nextpg {
+a.nextpg, a.nextpg:visited {
   all: unset;
+  text-decoration: none;
+  color: var(--green);
   border: 2px solid var(--green);
   padding: 0 2px 1px 2px;
 }
-a.nextpg:active {
+a.nextpg:active, a.nextpg::selection {
   color: var(--cream);
   background: var(--green);
 }
