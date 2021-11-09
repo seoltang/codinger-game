@@ -194,6 +194,7 @@ button.hint {
   background: var(--green);
   border: 0;
   padding: 2px 5px;
+  margin: auto 5px;
 }
 button#btnH1 {
   font-family: 'Roboto Slab', serif;
