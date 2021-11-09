@@ -23,20 +23,37 @@ p {
 }
 
 /* chess_intro.html */
+@keyframes appearEffect {
+  0% {
+    transform: translateX(-20px);
+    margin-left: 0;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 5px;
+    opacity: 1;
+  }
+}
 h1 {
   color: rgb(140, 140, 140);
   font-family: 'Podkova', serif;
   font-size: 3rem;
   margin: 40vh auto 0 auto;
+  animation: appearEffect 1.5s both;
 }
 h2 {
   color: var(--red);
   font-size: 11vw;
   margin: 0 auto;
+  animation: appearEffect 1.5s 1.5s both;
 }
 h1, h2 {
   margin-left: 5px;
 }
+h2+div.text {
+  animation: appearEffect 1.5s 3s both;
+}
+
 img.mirrorImg {
   width: 80%;
   display: block;
