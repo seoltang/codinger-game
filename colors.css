@@ -25,6 +25,12 @@ label[for=bgdColorPicker] {
 input#bgdColorPicker {
   margin-left: 5px;
 }
+input[type=color] {
+  height: 2.8rem;
+  border: 0;
+  padding: 0 2px;
+  vertical-align: middle;
+}
 
 /* Quiz */
 ul {
@@ -48,11 +54,27 @@ a, a:visited, a::selection {
   font-style: italic;
   font-weight: 700;
 }
-input[type=color] {
-  height: 2.8rem;
-  border: 0;
-  padding: 0 2px;
-  vertical-align: middle;
+
+/* 정답 입력 */
+form {
+  display: inline;
+}
+input[type=number] {
+  all: unset;
+  width: 3rem;
+  font-family: inherit;
+  height: 1.8rem;
+  vertical-align: baseline;
+  border-bottom: 2px solid black;
+  padding-bottom: 1px;
+  margin-right: 1px;
+}
+input[type=number]:focus {
+  outline: none;
+  border-bottom: 2px solid #8268db;
+}
+input[type=submit] {
+  display: none;
 }
 
 /* 힌트 */

@@ -53,10 +53,17 @@ hintBtnList.forEach((hintBtn, i) => {
 
 
 // 정답 입력
-const colorPicker = document.querySelector('#colorPicker');
 function openNextpg(event) {
-  if (event.target.value.toUpperCase() === "#B596DC") {
+  event.preventDefault();
+
+  let answer1 = this.answer1.value;
+  let answer2 = this.answer2.value;
+  let answer3 = this.answer3.value;
+
+  if (answer1 == 181 && answer2 == 150 && answer3 == 220) {
     location.href = "clear.html";
   }
 }
-colorPicker.addEventListener('change', openNextpg);
+
+const form = document.querySelector('form');
+form.addEventListener('submit', openNextpg);
