@@ -4,14 +4,14 @@
 body {
   font-size: 1.6rem;
   margin: 0;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .container {
   display: inline-block;
-  min-height: calc(var(--vh, 1vh) * 100 - var(--borderWidth) * 5);
+  min-height: 100vh - var(--borderWidth) * 5;
   width: calc(100% - var(--borderWidth) * 5);
   text-align: center;
 }
@@ -20,7 +20,7 @@ body {
 label[for=bgdColorPicker] {
   display: block;
   color: white;
-  margin-top: calc(var(--vh, 1vh) * 8);
+  margin-top: 8vh;
 }
 input#bgdColorPicker {
   margin-left: 5px;
@@ -34,7 +34,7 @@ ul {
   font-size: 1.8rem;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0;
-  margin: calc(var(--vh, 1vh) * 6) 0;
+  margin: 6vh 0;
 }
 li {
   margin: 2rem;

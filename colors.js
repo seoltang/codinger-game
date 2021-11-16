@@ -1,14 +1,3 @@
-// 화면 사이즈 맞추기
-function setScreenSize() {
-  let vh = window.innerHeight * 0.01;
-
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
-setScreenSize();
-window.addEventListener('resize', setScreenSize);
-
-
 // input color value 따라 배경색 바꾸기
 const body = document.querySelector('body');
 const gradientBorder = document.querySelector('.gradientBorder');
