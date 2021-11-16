@@ -14,18 +14,18 @@ function changeBgdColor(event) {
 
   // input color value 따라 text 색 바꾸기
   const hintText = document.querySelectorAll('div.hint');
-  const tryThis = document.querySelector('label[for=bgdColorPicker]');
+  const bgdColorLabel = document.querySelector('label[for=bgdColorPicker]');
 
   if (parseInt(bgdColorPicker.value.charAt(1)) <= 7) {
     for (let hintTextEle of hintText) {
       hintTextEle.style.color = "white";
     }
-    tryThis.style.color = "white";
+    bgdColorLabel.style.color = "white";
   } else {
     for (let hintTextEle of hintText) {
       hintTextEle.style.color = "black";
     }
-    tryThis.style.color = "black";
+    bgdColorLabel.style.color = "black";
   }
 }
 bgdColorPicker.addEventListener('input', changeBgdColor);
