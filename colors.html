@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ROUND 5</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- 기본 폰트 -->
+    <link rel="stylesheet" href="fonts\fonts.css">
+
+    <link rel="stylesheet" href="colors.css">
+  </head>
+  <body>
+    <div class="container gradientBorder onload">
+      <label for="bgdColorPicker" class="engFont">Try this:
+      <input type="color" id="bgdColorPicker"></label>
+      <ul>
+        <li><a href="color-red.html" target="_blank">❤️<span class="colorName">Red</span> = 237, 84, 112</a></li>
+        <li><a href="color-green.html" target="_blank">💚<span class="colorName">Green</span> = 172, 211, 99</a></li>
+        <li><a href="color-blue.html" target="_blank">💙<span class="colorName">Blue</span> = 102, 163, 204</a></li>
+        <li><a href="color-purple.html" target="_blank">💜<span class="colorName">Purple</span> = </a><input type="color" id="colorPicker" value="#ffffff" autocomplete = "off"></li>
+      </ul>
+
+      <!-- 힌트 -->
+      <button type="button" class="hint"><span class="engFont">Hint</span> 🔈</button>
+      <div class="hint hidden">
+        하트나 색깔 이름을 눌러 봐!
+      </div>
+      <button type="button" class="hint"><span class="engFont">Hint</span> 🔉</button>
+      <div class="hint hidden">
+        <a href="https://color.adobe.com/ko/create/color-wheel" target="_blank">🌈Click = 색상 휠, 색상 팔레트 생성기</a>
+      </div>
+      <button type="button" class="hint"><span class="engFont">Hint</span> 🔊</button>
+      <div class="hint hidden">
+        탭 목록을 열어서 색깔 방의 탭 제목을 확인해 봐. 공유 창이나 방문 기록 창에서도 확인할 수 있어.
+      </div>
+    </div>
+
+    <script src="colors.js"></script>
+  </body>
+</html>

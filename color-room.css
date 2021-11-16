@@ -1,0 +1,20 @@
+body {
+  font-size: 1.6rem;
+  overflow: hidden;
+  margin: 0;
+  overflow: hidden;
+}
+.text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 5rem;
+  color: white;
+  font-size: 7vw;
+  font-family: 'Bitter', serif;
+  font-style: italic;
+  font-weight: 800;
+}

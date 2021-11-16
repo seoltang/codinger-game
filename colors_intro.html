@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ROUND 5</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- 기본 폰트 -->
+    <link rel="stylesheet" href="fonts\fonts.css">
+
+    <!-- Adobe fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/wyr8fgb.css">
+
+    <link rel="stylesheet" href="colors_intro.css">
+  </head>
+  <body>
+    <h1>ROUND 5</h1>
+
+    <div class="textBox">
+      <svg class="title">
+        <!-- Gradient -->
+        <defs>
+          <linearGradient id="gradient" x1="0" y1="0" x2="100%" y2="100%">
+            <stop stop-color="#FFE565" offset="10%"/>
+            <stop stop-color="#FF00AA" offset="90%"/>
+          </linearGradient>
+        </defs>
+        <!-- Text -->
+        <text x="0vw" y="30vw">C</text>
+        <text x="16vw" y="30vw">o</text>
+        <text x="27vw" y="30vw">l</text>
+        <text x="35vw" y="30vw">o</text>
+        <text x="47vw" y="30vw">r</text>
+        <text x="56vw" y="30vw">s</text>
+      </svg>
+    </div>
+
+    <div class="text">
+      Copy this:
+      <span class="copyText">The chief difficulty Alice found at first was in managing her flamingo: she succeeded in getting its body tucked away, comfortably enough, under her arm, with its legs hanging down, but generally, just as she had got its neck nicely straightened out, and was going to give the hedgehog a blow with its head, it would twist itself round and look up in her face, with such a puzzled expression that she could not help bursting out laughing: and when she had got its head down, and was going to begin again, it was very provoking to find that the hedgehog had unrolled itself, and was in the act of crawling away: besides all this, there was generally a ridge or furrow in the way wherever she wanted to send the hedgehog to, and, as the doubled-up soldiers were always getting up and walking off to other parts of the ground, Alice soon came to the conclusion that it was a very difficult game indeed.</span>
+    </div>
+
+    <script>
+      const copyText = document.querySelector('.copyText');
+      copyText.addEventListener('copy', (event) => {
+        location.href = "colors.html";
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+:root {
+  --borderWidth: 5px;
+}
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: inline-block;
+  min-height: calc(var(--vh, 1vh) * 100 - var(--borderWidth) * 5);
+  width: calc(100% - var(--borderWidth) * 5);
+  text-align: center;
+}
+
+/* Try this */
+label[for=bgdColorPicker] {
+  display: block;
+  color: white;
+  margin-top: calc(var(--vh, 1vh) * 8);
+}
+input#bgdColorPicker {
+  margin-left: 5px;
+}
+
+/* Quiz */
+ul {
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+  font-size: 1.8rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0;
+  margin: calc(var(--vh, 1vh) * 6) 0;
+}
+li {
+  margin: 2rem;
+}
+a, a:visited {
+  all: unset;
+}
+.colorName {
+  font-family: 'Bitter', serif;
+  font-style: italic;
+  font-weight: 700;
+}
+input[type=color] {
+  height: 2.8rem;
+  border: 0;
+  padding: 0 2px;
+  vertical-align: middle;
+}
+
+/* 힌트 */
+button.hint {
+  all: unset;
+  display: block;
+  width: 6rem;
+  text-align: left;
+  color: black;
+  background: white;
+  border: 2px solid black;
+  padding: 0 10px;
+  margin: 0 20px 10px 20px;
+}
+.engFont {
+  font-family: 'Bitter', serif;
+  font-style: italic;
+  font-weight: 600;
+}
+div.hint {
+  font-size: 1.5rem;
+  text-align: justify;
+  margin: -5px 20px 20px 20px;
+}
+.hidden {
+  display: none;
+}
+
+/* 테두리 */
+.gradientBorder {
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradientBorder::after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+.onload.gradientBorder::after {
+  top: calc(-2.5 * var(  --borderWidth));
+  left: calc(-2.5 * var(  --borderWidth));
+  height: calc(100% + var(--borderWidth) * 5);
+  width: calc(100% + var(--borderWidth) * 5);
+  border-radius: 0;
+}
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

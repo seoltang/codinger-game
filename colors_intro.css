@@ -1,0 +1,103 @@
+body {
+  margin: 20px;
+  color: #FFE565;
+  background: #2b0769;
+  font-size: 1.6rem;
+}
+
+/* Round 5 */
+@keyframes appearEffect {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h1 {
+  font-family: 'Podkova', serif;
+  font-size: 3rem;
+  margin: 20vh auto 0 auto;
+  margin-left: 2vw;
+  animation: appearEffect 1.5s both;
+}
+
+/* Colors */
+div.textBox {
+  display: flex;
+  align-items: center;
+}
+svg.title {
+  display: block;
+  height: 40vw;
+  width: 90vw;
+}
+svg.title text {
+  font-family: pacifico, sans-serif;
+  font-weight: 700;
+  font-size: 30vw;
+  fill: transparent;
+  stroke-dasharray: 120vw;
+  animation: stroke 1.5s linear forwards;
+}
+
+svg.title text:nth-child(2) {
+  animation-delay: 1.5s;
+}
+svg.title text:nth-child(3) {
+  animation-delay: 2.25s;
+}
+svg.title text:nth-child(4) {
+  animation-delay: 3s;
+}
+svg.title text:nth-child(5) {
+  animation-delay: 3.75s;
+}
+svg.title text:nth-child(6) {
+  animation-delay: 4.5s;
+}
+svg.title text:nth-child(7) {
+  animation-delay: 5.25s;
+}
+@keyframes stroke {
+  0% {
+    stroke: url(#gradient);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-dashoffset: 120vw;
+  }
+  70% {
+    fill: transparent;
+  }
+  99% {
+    stroke: url(#gradient);
+    stroke-width: 1px;
+  }
+  100% {
+    fill: url(#gradient);
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Copy this */
+div.text {
+  font-family: 'Bitter', serif;
+  font-style: italic;
+  font-weight: 600;
+  text-align: justify;
+  margin: 20px 2vw 0 2vw;
+  animation: appearEffect 1.5s 6.75s both;
+}
+.copyText {
+  font-weight: 400;
+  color: transparent;
+}
+div.text::selection {
+  all: unset;
+}
+.copyText::selection {
+  color: #f6ff9b;
+  background: #008fba;
+  text-shadow: 1px 1px #8f006d;
+}
