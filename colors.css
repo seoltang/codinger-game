@@ -20,7 +20,7 @@ body {
 label[for=bgdColorPicker] {
   display: block;
   color: white;
-  margin-top: 8vh;
+  margin-top: 10vh;
 }
 input#bgdColorPicker {
   margin-left: 5px;
@@ -33,14 +33,14 @@ input[type=color] {
 }
 
 /* Quiz */
-ul {
+ul.quiz {
   display: inline-block;
   text-align: left;
   list-style: none;
   font-size: 1.8rem;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0;
-  margin: 6vh 0;
+  margin: 8vh 0;
 }
 li {
   margin: 2rem;
@@ -54,6 +54,38 @@ a, a:visited, a::selection {
   font-style: italic;
   font-weight: 700;
 }
+@keyframes shake {
+  10% {
+    transform: translate(1px, -2.5px) rotate(-2.5deg);
+  }
+  20% {
+    transform: translate(-2px, 0px) rotate(4deg);
+  }
+  30% {
+    transform: translate(1.5px, 4px) rotate(-2.5deg);
+  }
+  40% {
+    transform: translate(-2.5px, 1px) rotate(3deg);
+  }
+  50% {
+    transform: translate(1px, 2.5px) rotate(0deg);
+  }
+  60% {
+    transform: translate(-2px, -1.5px) rotate(-4deg);
+  }
+  70% {
+    transform: translate(2.5px, -2px) rotate(3deg);
+  }
+  80% {
+    transform: translate(0px, 1.5px) rotate(-3deg);
+  }
+  90% {
+    transform: translate(-2.5px, 2.5px) rotate(2.5deg);
+  }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
 
 /* 정답 입력 */
 form {
@@ -61,7 +93,7 @@ form {
 }
 input[type=number] {
   all: unset;
-  width: 3rem;
+  width: 3.1rem;
   font-family: inherit;
   height: 1.8rem;
   vertical-align: baseline;

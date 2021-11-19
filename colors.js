@@ -59,9 +59,16 @@ function openNextpg(event) {
   let answer1 = this.answer1.value;
   let answer2 = this.answer2.value;
   let answer3 = this.answer3.value;
+  const quizbox = document.querySelector('ul.quiz');
 
   if (answer1 == 181 && answer2 == 150 && answer3 == 220) {
     location.href = "clear.html";
+  } else {
+    // 정답 틀렸을 시 quiz box shake
+    quizbox.style.animation = "shake 0.05s linear 5 running";
+    let timerId = setTimeout(function() {
+      quizbox.style.animation = "paused";
+    }, 250);
   }
 }
 
