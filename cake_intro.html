@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ROUND 4</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- 기본 폰트 -->
+    <link rel="stylesheet" href="fonts\fonts.css">
+
+    <link rel="stylesheet" href="cake.css">
+  </head>
+  <body>
+    <h1>ROUND 4</h1>
+    <h2>케이크 자르는 법</h2>
+    <div class="text">
+      <blockquote>
+        <p>사자와 유니콘이 왕위를 놓고 싸우네.</p>
+        <p>사자가 시내를 빙빙 돌며 유니콘을 때렸네.</p>
+        <p>어떤 이는 하얀 빵을 주고 어떤 이는 갈색 빵을 주었네.</p>
+        <p>어떤 이는 건포도 케이크를 주고 북을 쳐서 그들을 시내에서 내쫓았네.</p>
+      </blockquote>
+    </div>
+    <img class="bookImg scrollAnimation" src="cake_img\Are_you_animal.png" alt="">
+    <div class="text scrollAnimation">
+      <p>"이건 뭐지!"</p>
+      <p>사자는 앨리스를 보고 게으르게 눈을 끔벅거리며 커다란 종이 울리는 것처럼 낮고 우렁우렁한 목소리로 물었다.</p>
+      <p>"아하, 이게 뭘까?"</p>
+      <p>유니콘이 신이 나서 말했다.</p>
+      <p>"너는 짐작도 못할 거야. 나도 그랬거든."</p>
+      <p>사자는 피곤한 듯이 앨리스를 쳐다보았다.</p>
+      <p>"너는 동물이니, 야채니, 광물이니?"</p>
+      <p>사자는 한 마디 할 때마다 하품을 했다.</p>
+      <p>"전설 속의 괴물이지!"</p>
+      <p>앨리스보다 먼저 유니콘이 소리쳤다.</p>
+      <p>"그럼 케이크를 나누어 줘, 괴물아."</p>
+      <p>사자가 말했다. 사자는 엎드려서 앞발에 턱을 고였다.</p>
+      <p>"케이크는 공평하게 나누어야 해, 물론 알겠지만!"</p>
+    </div>
+
+    <script>
+      // Scroll Animation
+      let saTriggerMargin = 300;
+      const saElementArr = document.querySelectorAll('.scrollAnimation');
+
+      function saFunc () {
+        for (const saElement of saElementArr) {
+          if (!saElement.classList.contains('visible')) {
+            if (window.innerHeight > saElement.getBoundingClientRect().top + saTriggerMargin) {
+              saElement.classList.add('visible');
+            }
+          }
+        }
+      }
+      window.addEventListener('load', saFunc);
+      window.addEventListener('scroll', saFunc);
+    </script>
+
+  </body>
+</html>

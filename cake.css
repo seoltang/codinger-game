@@ -1,0 +1,238 @@
+/* 공통 */
+:root {
+  --ivory: #f6f3ee;
+  --darkblue: #0e4870;
+  --coral: #d96968;
+  --strongYellow: #ff9800;
+  --softYellow: #fdc48b;
+  --lightYellow: #ffcf9d;
+}
+body {
+  font-size: 1.5rem;
+  background: var(--ivory);
+  color: var(--darkblue);
+  margin: 20px 15px;
+}
+.text {
+  text-indent: 1rem;
+  text-align: justify;
+  margin: 30px 0;
+}
+.scrollAnimation {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 1s ease;
+}
+.scrollAnimation.visible {
+  opacity: 1;
+  transform: none;
+}
+.hidden {
+  display: none;
+}
+
+
+/* cake_intro.html */
+@keyframes appearEffect {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h1 {
+  color: rgb(140, 140, 140);
+  font-family: 'Podkova', serif;
+  font-size: 3rem;
+  margin: 40vh auto 0 auto;
+  animation: appearEffect 1.5s both;
+}
+h2 {
+  color: var(--strongYellow);
+  font-size: 11vw;
+  margin: 0 auto;
+  animation: appearEffect 1.5s 1.5s both;
+}
+h1, h2 {
+  margin-left: 5px;
+}
+h2+.text {
+  animation: appearEffect 1.5s 3s both;
+}
+blockquote {
+  font-style: italic;
+  text-indent: 0;
+  word-break: keep-all;
+  text-align: left;
+  margin: auto 25px;
+}
+blockquote p {
+  margin: 2rem auto;
+}
+p {
+  margin: 0.5rem auto;
+}
+img.bookImg {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* cake.html */
+.text.story {
+  margin: 10px 0;
+}
+.text.story:first-child {
+  margin-top: 30px;
+}
+
+.recipeImg {
+  display: block;
+  width: 75%;
+  margin: 30px auto;
+}
+.recipeImg:active {
+  transform: scale(1.2);
+}
+.recipeContainer {
+  background-color: var(--coral);
+  color: var(--ivory);
+  font-family: 'Poor Story', cursive;
+  font-size: 1.6rem;
+  padding: 10px;
+  margin: 30px 0;
+}
+.recipeContainer .recipeWrapper {
+  border: 3px dashed var(--softYellow);
+  padding: 7.5px 10px;
+}
+.recipeContainer .recipeTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 12px 0;
+}
+.recipeContainer ul {
+  all: unset;
+  list-style: none;
+}
+.recipeContainer ul li {
+  margin: 7px 0;
+}
+.recipeContainer .alphabet {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  background-color: var(--softYellow);
+  color: var(--coral);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 7.5px;
+}
+@keyframes openRecipe {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(6px + 15px + 2rem + 24px + (2.5rem + 7px) * 12);
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+form {
+  text-align: center;
+  margin: 0 auto 30px;
+}
+input[type="text"].password {
+  font-family: inherit;
+  font-size: 1.6rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid var(--darkblue);
+  height: 2rem;
+  margin-right: 5px;
+}
+input[type="text"].password:focus {
+  outline: inherit;
+}
+button.password {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 0;
+  color: var(--lightYellow);
+  background: var(--darkblue);
+  border: 2px solid var(--darkblue);
+  border-radius: 0;
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+}
+button.password:active {
+  color: var(--darkblue);
+  background: var(--lightYellow);
+}
+
+.hint {
+  font-size: inherit;
+}
+button.hint {
+  background-color: var(--darkblue);
+  color: var(--lightYellow);
+  border: 0;
+  padding: 2px 5px;
+  margin: auto 5px;
+}
+button.hint#hintBtn1 {
+  display: block;
+  font-family: 'Roboto Slab', serif;
+}
+div.hint {
+  text-align: justify;
+  margin: 5px 10px 20px 10px;
+}
+
+.outro {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  top: 10vh;
+}
+img#drumImg {
+  display: none;
+}
+.drumstick {
+  display: inline-block;
+  position: absolute;
+  font-size: 1.6rem;
+  text-align: center;
+}
+@keyframes beatDrum1 {
+  0% {
+    transform: rotate(10deg) translate(-20%, 300%);
+  }
+  100% {
+    transform: rotate(-10deg) translate(-30%, 50%);
+  }
+}
+@keyframes beatDrum2 {
+  0% {
+    transform: rotate(-72deg) translate(35%, 250%);
+  }
+  100% {
+    transform: rotate(-80deg) translate(10%, 350%);
+  }
+}
